@@ -20,14 +20,15 @@ func main() {
 }
 
 func PrintAllSubsets(nums []int, result [][]int, pow int) {
+	len := len(nums)
 	for i := 0 ; i < pow ; i++  {
 		temp := i
 		count := 0
-		result[i] = make([]int, 0)
+		result[i] = make([]int, len)
 		for temp > 0 {
 			bit := temp & 1
 			if bit == 1 {
-				result[i] = append(result[i], nums[count])
+				result[i][count] = nums[count]
 			}
 			count++
 			temp >>= 1
