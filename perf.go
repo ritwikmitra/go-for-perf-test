@@ -21,7 +21,7 @@ func main() {
 
 func PrintAllSubsets(nums []int, result [][]int, pow int) {
 	len := len(nums)
-	for i := 0 ; i < pow ; i++  {
+	for i := 0; i < pow; i++ {
 		temp := i
 		count := 0
 		result[i] = make([]int, len)
